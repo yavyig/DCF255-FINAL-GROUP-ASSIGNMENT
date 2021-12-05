@@ -25,6 +25,11 @@ body {
   background-image: url("../img/background2.png");
   background-repeat: repeat-y repeat-x;
   line-height: 1.6;
+  max-width: 900px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 nav {
   position: sticky;
