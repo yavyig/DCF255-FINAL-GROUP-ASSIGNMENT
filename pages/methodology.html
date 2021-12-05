@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>DCF255 ASSIGNMENT - GROUP 5</title>
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+
+  <body>
+    <header>
+    <div class="maintitle">
+      <h1 id="app-title"> <a href="../index.html"class="maintitle"style="text-decoration: none;" title="Main Page">DCF255 ASSIGNMENT - GROUP 5 </a> </h1>
+    </div>
+    </header>
+
+<nav>
+  <div class="pages">
+    <a href="info.html"class="pages"style="text-decoration: none;">Information</a>
+    <span>|</span>
+      <a href="history.html"class="pages" style="text-decoration: none;">History</a>
+      <span>|</span>
+     <a href="#"class="pages"style="text-decoration: none;">Methodology</a></li>
+      <span>|</span>
+      <a href="references.html"class="pages"style="text-decoration: none;">References</a> 
+  </div>      
+ </nav>
+<!-- CONTENT COMES BELOW  -->
+<br>
+<img class="center" alt="imap picture" src="../img/Picture7.png">
+
+<p><u><b>IMAPs Compatibility</b></u></p>
+<p>IMAP4 is a new implementation derived from IMAP2. In fact, the latter is designed to be upwards compatible to the former despite the fact that some early protocols in IMAP2 have been obsoleted, such as commands, responses, and data formats, which describes in RFC 1730.</p>
+<p>IMAP2 was made for the purpose of supporting the older RFC 822 standard, which defines an electronic message format consisting of header fields and an optional message body. As a result, several fetch items (also known as “citation linker”) in IMAP incorporate RFC 822 in their name.</p>
+<br>
+<p><u><b>Protocol Inclusivity</b></u></p>
+<p>There are several protocol conventions in IMAP. They provided the concepts to the IMAP protocol which, however, doesn’t mean they are strictly followed but reflect generally applicable practice. When implementing, it is important to know their conventions to avoid conflicts. For instance, “&” may not used as a hierarchy delimiter since it conflicts with the Mail International Naming Convention, and other conventions use this symbol will also be affected.</p>
+<br>
+<p><u><b>TCP/IP Link Port </b></u></p>
+<p>IMAP4 retrieves email messages from a mail server over a TCP/IP connection. When TCP is used, an IMAP4 server listens on port 143; if SSL/TLS, IMAP is assigned the port 993.</p>
+<br><hr><br>
+<p><u><b>COMMAND AND RESPONSES</b></u></p>
+<p>To establish a IMAP4rev1 connection between client side and server side, an initial greeting from the server is needed for the interactions. These client/server interactions consist of 3 elements: </p>
+<ol>
+  <li>Client command</li>
+  <li>Server data</li>
+  <li>A server completion result response</li>
+</ol>
+<p>The form of lines is the way used for all interactions to transmit. Each line ends with CRLF and has prefix of an identifier; generally, a short alphanumeric string like A0001, A0002. The client is the one who start building an operation with a string command.</p>
+<br>
+<p><u><b>MESSAGE ATTRIBUTES</b></u></p>
+<p>Messages in IMAP4 are access by one of two numbers: (1) the unique identifier number or (2) the message sequence number.  </p>
+<br>
+<p><u><b>The Unique Identifier Number (UID)</b></u></p>
+<p>The UID message attribute is a 32-bit value assigned to each message used with the unique identifier validity value to form a 64-bit value where the reference to any other message in the mailbox or any newly created mailbox with the same name are strictly prohibited. Unique identifiers MUST be assigned in an ascending order that is, when messages are added to the mailbox, they are subsequently assigned UID with incremental values. If the physical messages are rearranged by an external non-IMAP agent, the re-generation of UID will be required; if not, the ascending rule will be broken. The unique identifier of a message must not change during the session, and never change between sessions. </p>
+<br>
+
+<img class="stretch" alt="imap picture" src="../img/Picture2.png">
+<br><hr><br>
+<p><u><b>Message Sequence Number Message Attribute</b></u></p>
+<p>A relative position from 1 to the number of messages in the mailbox. This position MUST be ordered by ascending unique identifier. As each new message is added, it is assigned a message sequence number that is 1 higher than the number of messages in the mailbox before that new message was added.</p>
+<p>Message sequence numbers can be reassigned during the session. For example, when a message is permanently removed (expunged) from the mailbox, the message sequence number for all subsequent messages is decremented. The number of messages in the mailbox is also decremented. Similarly, a new message can be assigned a message sequence number that was once held by some other message prior to an expunge.</p>
+<br>
+<p><u><b>STATE AND FLOW DIAGRAM</b></u></p>
+<p>Once the connection between client and server is established, an IMAP4rev1 connection is in one of four states. The initial state is identified in the server greeting. Most commands are only valid in certain states. It is a protocol error for the client to attempt a command while the connection is in an inappropriate state, and the server will respond with a BAD or NO (depending upon server implementation) command completion result.</p>
+
+<p><b>Authenticated State</b></p>
+<p>In the authenticated state, the client is authenticated and MUST select a mailbox to access before commands that affect messages will be permitted. This state is entered when a pre-authenticated connection starts, when acceptable authentication credentials have been provided, after an error in selecting a mailbox, or after a successful CLOSE command.</p>
+
+<p><b>Selected State</b></p>
+<p>In a selected state, a mailbox has been selected to access. This state is entered when a mailbox has been successfully selected.</p><br><hr><br>
+
+<p><b>Logout State</b></p>
+<p>Logout state indicates that the connection is being terminated. This state is triggered by the client via a logout command, or or by unilateral action on the part of eitherthe client or server.</p>
+
+<img class="center" alt="imap picture" src="../img/Picture3.png">
+<br>
+<img class="center" alt="imap picture" src="../img/Picture4.png">
+<br><br><br>
+
+<footer class="groupmembers">
+  <div class="wrapper-buttons">
+    <button class="roger" onclick="window.location.href='students.html'" title="Email: ywu259@myseneca.ca &#10;Student ID: 146740204&#10;Section: DCF255-NAA  " >Roger Wu</button>
+     <button class="cherry" onclick="window.location.href='students.html'" title="Email: xlzheng@myseneca.ca &#10;Student ID: 124036161&#10;Section: DCF255-NAA  ">Xiao Ling Zheng</button>
+     <button class="yavuz" onclick="window.location.href='students.html'" title="Email: yayigitoglu@myseneca.ca &#10;Student ID: 127785186&#10;Section: DCF255-NAA  ">Yavuz Alper Yigitoglu</button>
+   </div>
+</footer>
+  </body>
+</html>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans:wght@300&display=swap');
+  </style> 

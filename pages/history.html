@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>DCF255 ASSIGNMENT - GROUP 5</title>
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+
+  <body>
+    <header>
+    <div class="maintitle">
+      <h1 id="app-title"> <a href="../index.html"class="maintitle"style="text-decoration: none;" title="Main Page">DCF255 ASSIGNMENT - GROUP 5 </a> </h1>
+    </div>
+    </header>
+
+<nav>
+  <div class="pages">
+    <a href="info.html"class="pages"style="text-decoration: none;">Information</a>
+    <span>|</span>
+      <a href="#"class="pages" style="text-decoration: none;">History</a>
+      <span>|</span>
+     <a href="methodology.html"class="pages"style="text-decoration: none;">Methodology</a></li>
+      <span>|</span>
+      <a href="references.html"class="pages"style="text-decoration: none;">References</a> 
+  </div>     
+ </nav>
+<!-- CONTENT COMES BELOW  -->
+
+<img class="stretch" alt="history" src="../img/history.png">
+
+<p><u><b>History</b></u></p>
+<img class="radius" alt="Mark Krispin's photo" width="25%" title="Mark Krispin" src="../img/MarkKrispin.jpg">
+<p><ul>
+  <li>Created by Mark Crispin at Stanford in the <b>1980s</b>, then spent another 20 years working on the IMAP specs and reference implementation.</li>
+
+  <br>
+
+  <li>IMAP specification comes in the form of a “Request for Comments” or RCFs which is a memo describing how to implement the protocol that has been a standard by the internet Engineering Task Force.</li>
+
+  <li>The current RFC that describes IMAP is RFC3501 which was published in <b>2003</b></li>
+  <br>
+  <li>Older protocol called POP – download mail to your local device/machine and delete from the server.</li><ul class="underlist"><li><b><u>Disadvantage:</u></b> hard to manage mails if using multiple computers.</li></ul>
+<br>
+  <li>Original version of IMAP is lost to history and IMAP2 is the first released in <b>1988</b> that made it into the standards </li>
+<ul class="underlist"> 
+  <li>Only supported “online” operation, meaning it assumed your client is connected to the server when reading or modifying messages.</li>
+  <li><b><u>Disadvantage:</u></b> Had to make sure to have a reliable connection before checking the mail.<ul class="underlist"><li>Because message was only identified by a “sequence” number and the numbers were not persistent across client sessions.</li></ul></li>
+</ul>
+<br>
+<!-- <img class="center" id="Difference" alt="imap4 picture" src="../img/Picture5.jpg"><br> -->
+<li><red style="color:red"><b>IMAP4</b> </red> was introduced in <b>1994</b></li>
+<ul class="underlist">
+  <li>Persistent message identifiers was added called UID.</li>
+  <li>Can elaborate on UIDs.</li>
+</ul> <br>
+
+
+
+<li>The basic IMAP protocol has remained unchanged since <b>1996</b></li><ul class="underlist"><li>New features were introduced and added.</li></ul>
+</ul></p><br>
+
+
+<img class="center" alt="imap vs pop" src="../img/Picture8.png"><br>
+
+<p><u><b>Difference between IMAP and POP3</b></u></p>
+<p><ul>
+  <li>The main two protocols to set up an email client or app.</li>
+  <li>POP stands for Post Office Protocol, is older than IMAP. It allows user to download emails from a remote server for permanent storage. There were revisions of POP and the current version is POP3.</li>
+</ul>
+<br><br>
+<!-- <img class="stretch" alt="imap4 picture" src="../img/Picture6.jpg"><br> -->
+<br>
+
+
+
+<footer class="groupmembers">
+  <div class="wrapper-buttons">
+    <button class="roger" onclick="window.location.href='students.html'" title="Email: ywu259@myseneca.ca &#10;Student ID: 146740204&#10;Section: DCF255-NAA  " >Roger Wu</button>
+     <button class="cherry" onclick="window.location.href='students.html'" title="Email: xlzheng@myseneca.ca &#10;Student ID: 124036161&#10;Section: DCF255-NAA  ">Xiao Ling Zheng</button>
+     <button class="yavuz" onclick="window.location.href='students.html'" title="Email: yayigitoglu@myseneca.ca &#10;Student ID: 127785186&#10;Section: DCF255-NAA  ">Yavuz Alper Yigitoglu</button>
+   </div>
+</footer>
+  </body>
+</html>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans:wght@300&display=swap');
+  </style> 

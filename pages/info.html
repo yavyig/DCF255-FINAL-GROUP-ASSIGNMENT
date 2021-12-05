@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>DCF255 ASSIGNMENT - GROUP 5</title>
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+
+    <body>
+    <header>
+    <div class="maintitle">
+      <h1 id="app-title"> <a href="../index.html"class="maintitle"style="text-decoration: none;" title="Main Page">DCF255 ASSIGNMENT - GROUP 5 </a> </h1>
+    </div>
+    </header>
+
+<nav>
+      <div class="pages">
+        <a href="#"class="pages"style="text-decoration: none;">Information</a>
+        <span>|</span>
+          <a href="history.html"class="pages" style="text-decoration: none;">History</a>
+          <span>|</span>
+         <a href="methodology.html"class="pages"style="text-decoration: none;">Methodology</a></li>
+          <span>|</span>
+          <a href="references.html"class="pages"style="text-decoration: none;">References</a>  
+      </div>     
+ </nav>
+<!-- CONTENT COMES BELOW  -->
+<br><img class="center" alt="imap picture" src="https://d33wubrfki0l68.cloudfront.net/e778ca5b16267af8ed82ade4df88713462b1e693/7d422/uploads/9a93f2a4-db9a-4932-99d6-9d7eca6a8997.jpg">
+
+<p><u><b>Background of IMAP</b></u></p>
+<p><ul>
+  <li>IMAP stands for Internet Message Access Protocol.</li>
+  <li>Open standard that describes how to access messages in an email mailbox.</li>
+  <li>The current version is IMAP4 even though most interface don’t include the number</li>
+  <li>Protocols used for reading emails, and retrieving emails from an email server so you can access to them on your own devices such as on your laptop/desktop/mobile, etc.</li>
+<li>IMAP is a more effectively way of accessing email since it acts like a form of cloud storage compare to POP.</li>
+<li>A more complex protocol than POP.</li>
+<li>It leaves emails on the server while caching meaning temporarily storing emails locally.</li>
+</ul></p><br>
+
+<p><u><b>How does IMAP Works</b></u></p>
+<p> IMAP is an interactive client-server model, it connects to the email server and clients can send their request such as reading a specific emails to the server. This request is then cached locally meaning that clients are not downloading any local copies of the message but simply can work on their own devices. Once they have made changes to their emails, such as deleting or sending a new email, the server will process and save the changes before disconnecting. IMAP can manipulate persistent message status flags which includes “Seen”, “Deleted”, “Answered”, as well as the user-defined flags. IMAP allows concurrent updates and access to shared mailboxes. This is effectively when multiple clients are processing messages for a common inbox. Changes can be seen to all the concurrently actives clients through this protocol. IMAP allows defer transferring of message which is useful when is connecting to a mail server through low band-with lines. In another words, client can choose to read certain part of the message instead of retrieving everything all at once to save more time and be more efficient. However, there are freely available IMAP development libraries, and is a protocol that is more complex than POP. This would not be a disadvantage though because it is changing very rapidly, and development is being more advanced now to further develop and improve on this protocol. </p><br>
+<img class="center" src="https://packt-type-cloud.s3.amazonaws.com/uploads/sites/2496/2018/05/5deae5e9-80fe-4090-9387-a8b5419740de.png"> <br>
+
+<hr><br>
+<p><u><b>Advantages of IMAP</b></u></p>
+<p>There are many advantages of IMAP and that is why it is more commonly used among clients. </p>
+<p><ol>
+  <li>Mail is stored on the remote server so it is effective and accessible from several devices.</li>
+  <li>All changes are saved and tracked on the server, prevent duplicate inboxes.</li>
+  <li>Allows faster overview because only headers are displayed until content is explicitly requested.</li>
+  <li>If the sever is managed properly, the mails are automatically backed up and saved.</li>
+<li>IMAP saves local storage space because will not download anything unless you requested from your devic.</li>
+<li>Also allows the option of downloading and storing mails locally if needed.</li>
+<li>Allows multiple clients to manage the same inbox which is in line with how people use email nowadays.</li>
+<li>Even though internet connection is needed to access mail, but it is also possible to work office and sync or save changes when. You are back online.</li>
+</ol></p><br>
+
+<p><u><b>The Disadvantage of IMAP</b></u></p>
+<p> Most of the email providers only allows limited amount of space. Therefore, client will have to clean out their email often depending on their workload and if they have lots of messages in their accounts.</p>
+<br>
+<!-- <hr>
+<br> -->
+
+
+<p><u><b>Common IMAP Extensions</b></u></p>
+<p><ul>
+  <li><b><u>IDLE</u></b> – allows real-time notification of received mail.</li>
+  <li><b><u>SORT</u></b> – will arrange message at the server so that the email account can fetch certain ones without downloading all of them.</li>
+  <li><b><u>THREAD</u></b> – clients can retrieve related messages instead of downloading all mail in a folder</li>
+  <li><b><u>CHILDREN</u></b> – implements a hierarchy of folders.</li>
+  <li><b><u>ACL = Access Control List</u></b> – individual rights is specified in each IMAP folder.</li>
+</ul></p><br>
+
+
+</body>
+
+<script>
+
+  function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+  }
+  </script>
+
+<footer class="groupmembers">
+  <div class="wrapper-buttons">
+    <button class="roger" onclick="window.location.href='students.html'" title="Email: ywu259@myseneca.ca &#10;Student ID: 146740204&#10;Section: DCF255-NAA  " >Roger Wu</button>
+     <button class="cherry" onclick="window.location.href='students.html'" title="Email: xlzheng@myseneca.ca &#10;Student ID: 124036161&#10;Section: DCF255-NAA  ">Xiao Ling Zheng</button>
+     <button class="yavuz" onclick="window.location.href='students.html'" title="Email: yayigitoglu@myseneca.ca &#10;Student ID: 127785186&#10;Section: DCF255-NAA  ">Yavuz Alper Yigitoglu</button>
+   </div>
+</footer>
+</html>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans:wght@300&display=swap');
+  </style>
