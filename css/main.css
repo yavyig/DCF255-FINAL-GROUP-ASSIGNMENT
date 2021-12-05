@@ -92,6 +92,14 @@ footer {
   padding: 10px;
   /* font-weight: 900; */
 }
+
+.abstract{
+  margin: auto;
+  text-align: left;
+  padding: 10px;
+  /* font-weight: 900; */
+}
+
 .radius {
   border-radius: 50%;
   float: right;
